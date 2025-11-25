@@ -1,0 +1,75 @@
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    position: relative;
+    top: 86px;
+    padding: 0 4em;
+}
+
+.intro .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 3em;
+}
+
+.intro .text .header-tag {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro .text .header-tag span {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+
+.intro .text .header-tag span:first-child {
+    color: var(--brand-color);
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.intro .text .header-tag span:nth-child(2) {
+    color: var(--front-color);
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.intro .text .header-tag span:nth-child(3) {
+    color: var(--brand-color);
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.intro .text .header-tag h1 {
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.intro .text p {
+    color: var(--white-color);
+    font-size: .9rem;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.intro .search-bar {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: var(--brand-color);
+    transition: .5s;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.intro .search-bar:hover {
+    color: var(--white-color);
+}

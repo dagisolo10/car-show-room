@@ -1,0 +1,117 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    padding: 1em 4em;
+    z-index: 100;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: column;
+}
+
+header .logo span {
+    color: var(--brand-color);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1em;
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+    animation-delay: calc(var(--i) * .2s);
+}
+
+header .logo p {
+    color: var(--anchor-color);
+    font-size: .9rem;
+    text-align: center;
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+    animation-delay: calc(var(--i) * .2s);
+}
+
+header .nav-bar {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+
+header .nav-bar a.active {
+    color: var(--brand-color);
+}
+
+header .nav-bar input {
+    outline: none;
+    border: 1.5px solid var(--anchor-color);
+    background: transparent;
+    color: var(--white-color);
+    caret-color: var(--front-color);
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: .5s ease;
+    padding: .2em 1em;
+    border-radius: 2em;
+    position: relative;
+}
+
+header .nav-bar input::placeholder {
+    color: var(--anchor-color);
+}
+
+header .nav-bar a {
+    color: var(--anchor-color);
+    display: inline-block;
+    opacity: 0;
+    transition: .5s ease;
+    animation: slideUp 1s ease forwards;
+    animation-delay: calc(var(--i) * .2s);
+}
+
+header .nav-bar a:hover {
+    color: var(--faded-color);
+}
+
+header .search-bar {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: .9rem;
+    transition: .5s ease;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+    animation-delay: calc(var(--i) * .2s);
+}
+
+header .not-found {
+    position: absolute;
+    top: 60px;
+    right: 140px;
+    color: var(--error);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+
+header .search-bar:hover {
+    color: var(--anchor-color);
+}
+
+.overlay {
+    position: fixed;
+    /* top: -100%; */
+    left: 0;
+    top: -100%;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: 1000;
+    transition: 1s;
+}

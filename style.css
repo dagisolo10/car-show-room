@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+:root {
+    --brand-color: #008cff;
+    --anchor-color: rgb(67, 60, 106);
+    --bg-color: #00000f;
+    --front-color: rgba(173, 216, 230, 0.884);
+    --dark-color: hsl(249, 56%, 40%);
+    --faded-color: hsl(0, 0%, 80%);
+    --error: red;
+
+
+    --black-text-color: black;
+    --white-color: white;
+    --button-color: hsl(275, 100%, 50%);
+    --button-hover-color: hsl(271, 76%, 43%);
+    --strong-color: hsl(275, 100%, 50%);
+    --shadow-color: hsla(0, 0%, 60%, .5);
+    --shadow-hover-color: hsla(0, 0%, 80%, 0.5);
+}
+
+.dark {
+    --black-text-color: white;
+    --white-text-color: hsl(0, 0%, 10%);
+    --front-text-color: hsla(0, 0%, 16%, 0.9);
+    --strong-color: rgb(106, 0, 200);
+    --primary-color: #3388ff;
+    --bg-color: hsl(0, 0%, 80%);
+    --faded-text-color: hsl(0, 0%, 40%);
+    --dark-text-color: hsl(240, 75%, 72%);
+    --anchor-text-color: rgb(110, 100, 180);
+    --shadow-color: hsla(0, 0%, 0%, 0.463);
+    --shadow-hover-color: hsla(0, 0%, 0%, 0.671);
+}
+
+body {
+    background: url(/Pins/ferrari4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* backdrop-filter: blur(3px); */
+    /* backdrop-filter: brightness(.6); */
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    height: calc(100vh - 86px);
+    padding: 1em 0;
+}
+
+section.active {
+    visibility: visible;
+    overflow: auto;
+
+    animation: fadeIn 1.5s ease forwards;
+}
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

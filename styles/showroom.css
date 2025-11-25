@@ -1,0 +1,91 @@
+.show-room {
+    width: 100%;
+    top: 86px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    overflow: auto;
+}
+
+.show-room .search-result {
+    text-align: center;
+}
+.show-room .search-result span {
+    color: var(--anchor-color);
+}
+
+.show-room .cars-container {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    /* overflow-y: auto; */
+    gap: 2em;
+    padding: 1em 2em;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.show-room::-webkit-scrollbar {
+    width: .2em;
+}
+
+.show-room::-webkit-scrollbar-thumb {
+    background-color: var(--brand-color);
+}
+
+.show-room .car {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+    border-radius: .3em;
+    background: transparent;
+    transition: .7s ease;
+    backdrop-filter: blur(30px);
+    box-shadow: -2px -2px .5em hsl(0 0 100 / .1), 2px 2px 2em hsl(0, 0%, 0%);
+}
+
+.show-room .car:hover {
+    translate: 0 -5px;
+    box-shadow: -2px -2px .5em hsl(0 0 100 / .2), 2px 2px 2em hsl(0, 0%, 0%);
+}
+
+.show-room .car:hover .img {
+    transform: scale(.98);
+}
+
+.show-room .car .desc {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    "brand model model"
+    "price type hp"
+    "year fuel tran"
+    "desc desc desc";
+}
+
+.show-room .car .desc h1 {
+    color: var(--brand-color);
+}
+
+.show-room .car .desc h1:nth-child(2) {
+    color: var(--front-color);
+}
+
+.show-room .car .desc span {
+    color: var(--anchor-color);
+}
+
+.show-room .car .img {
+    width: 100%;
+    border-radius: .5em;
+    transition: .5s ease;
+}
+
+.show-room .car img {
+    width: 100%;
+    border-radius: .5em;
+}
